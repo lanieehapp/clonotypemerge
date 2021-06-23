@@ -31,5 +31,5 @@ RUN git clone https://github.com/lanieehapp/clonotypemerge.git
 ENV PATH clonotypemerge:$PATH
 
 # change the permission of the repo
-RUN chmod 777 -R variantmerge
+RUN chmod 777 -R clonotypemerge
 WORKDIR /usr/local/bin/clonotypemerge
