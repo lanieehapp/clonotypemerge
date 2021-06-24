@@ -15,7 +15,7 @@ top.ig.merged<-NULL
 all.t.merged<-NULL
 top.t.merged<-NULL
 
-for( i in 1:length(filt.file.list)){
+for( i in 1:length(all.ig)){
   
   print(i)
   curr.samp<-read.delim(all.ig[i], header=TRUE, sep="\t", check.names = FALSE)
