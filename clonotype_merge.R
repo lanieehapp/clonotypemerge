@@ -6,9 +6,13 @@ args = commandArgs(trailingOnly=TRUE)
 input.dir<-args[[1]]
 
 all.ig<-list.files(path=input.dir, pattern="*IG.all.clones*", full.names = TRUE)
+print(length(all.ig))
 top.ig<-list.files(path=input.dir, pattern="*IG.top.clones*", full.names = TRUE)
+print(length(all.ig))
 all.t<-list.files(path=input.dir, pattern="*T.all.clones*", full.names = TRUE)
+print(length(all.ig))
 top.t<-list.files(path=input.dir, pattern="*T.top.clones*", full.names = TRUE)
+print(length(all.ig))
 
 all.ig.merged<-NULL
 top.ig.merged<-NULL
@@ -18,6 +22,10 @@ top.t.merged<-NULL
 for( i in 1:length(all.ig)){
   
   print(i)
+  print(all.ig[i])
+  print(top.ig[i])
+  print(all.t[i])
+  print(top.t[i])
   curr.samp<-read.delim(all.ig[i], header=TRUE, sep="\t", check.names = FALSE)
   all.ig.merged<-rbind(all.ig.merged, curr.samp)
   
